@@ -8,11 +8,15 @@
 To find out if a specific person is listed in a database: 
 ```php
 $db.exists "PERSON(queriedperson@fd.ca)"
+```
 
 To match a password with a variable
+```php
 $db.match "PERSON($userVar).password", "password"
+```
 
 To create a new person with email address as key:
+```php
 $db.define "PERSON(newpers@onne.com)"
-
+```
 if the person already exists, nothing happens. 
