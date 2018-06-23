@@ -16,10 +16,9 @@ function evalExpression($expr, $db){
 	$objID = $rowRe[2];
 	return askDB($type, $objID,  $db);
 
-	}
+}
 	function match($expression, $value, $db){
 		$expressionValue = evalExpression($expression, $db);
-		//echo "matching ".$expressionValue ." with ".$value;
 		return ($expressionValue == $value);
 	}
 
@@ -41,4 +40,19 @@ function evalExpression($expr, $db){
 		
 		}
 	}
+
+
+	function dbCard($expression, $db){
+		preg_match("/(.+)\((.+)\)/", $expression, $rowRe);
+		$type = $rowRe[1];
+		$objID = $rowRe[2];
+		$results = $db->get_results("SELECT * FROM $type WHERE ".strtolower($type)." = '".$objID."'");
+		foreach ($results as $result){
+			echo $result->person;
+			echo $result->firstName;
+		}
+
+		echo $type." ".$objID;
+	}
+
 ?>
