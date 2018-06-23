@@ -6,6 +6,7 @@
 ## examples
 
 To find out if a specific person is listed in a database: 
+```php
 $db.exists "PERSON(queriedperson@fd.ca)"
 
 To match a password with a variable
