@@ -11,7 +11,7 @@ in tubings:
 USER("John Doe")
 ```
 
-is equivalent to: 
+is translated to SQL as: 
 
 ```sql
 ...FROM TABLE USER WHERE user = "john Doe"
