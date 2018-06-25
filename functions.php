@@ -46,13 +46,13 @@ function evalExpression($expr, $db){
 		preg_match("/(.+)\((.+)\)/", $expression, $rowRe);
 		$type = $rowRe[1];
 		$objID = $rowRe[2];
-		$results = $db->get_results("SELECT * FROM $type WHERE ".strtolower($type)." = '".$objID."'");
-		foreach ($results as $result){
-			echo $result->person;
-			echo $result->firstName;
-		}
+		$card = $db->get_row("SELECT * FROM $type WHERE ".strtolower($type)." = '".$objID."'");
+		
+		return $card;
+	}
 
-		echo $type." ".$objID;
+	function dbLaist($expression, $db){
+			return "ehllo";
 	}
 
 ?>
