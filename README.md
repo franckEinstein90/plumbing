@@ -1,9 +1,9 @@
 # tubings
 
 ## Database convention
-Tubings works by expecting table names to be written in uppercase, and primary unique keys to be stored in a field by the same name as the table, but lowercase. So, for example, the table USER is indexed by the primary key user, and the table BOOK is indexed by the primary key book. Moreover, when parsing a tubing statement, table names are considered to be functions that take values of the same type as the primary key of the table. 
+Tubings works by expecting table names to be written in uppercase, with primary unique keys  stored in fields with the same name as the table, but in lowercase. So, for example, the table USER is indexed by the primary key user, and the table BOOK is indexed by the primary key book. Moreover, when parsing a tubing statement, table names are considered to be functions that take values of the same type as the primary key of the table. 
 
-###example: 
+### example: 
 
 in tubings:
 
